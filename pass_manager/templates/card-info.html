@@ -1,0 +1,26 @@
+<div class="modal-body">
+	<div class="card-info-box">
+		<form method="POST" class="card-form">
+			<ul>
+				<li>
+					<label for="Name">Название</label>
+					<input class="card-input" type="text" name="Name" value="{{ object.name }}" readonly>
+				</li>
+				<li>
+					<label for="Username">Имя пользователя</label>
+					<input class="card-input" type="text" name="Username" value="{{ object.username }}" readonly>
+				</li>
+				<li>
+					<label for="Password">Пароль</label>
+					<input class="card-input" type="text" name="Password" value="{{ object.password }}" readonly>
+				</li>
+				<li>
+					<label for="Site">Сайт</label>
+					<input class="card-input" type="text" name="Site" value="{{ object.site }}" readonly>
+				</li>
+			</ul>
+			<a class="edit-btn" href="{% url 'edit-card' object.slug %}">Редактировать</a>
+			<a class="edit-btn" href="{% url 'delete-card' object.slug %}">Удалить</a>
+		</form>
+	</div>
+</div>

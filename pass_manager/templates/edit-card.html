@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card-box">
+	<form method="POST" class="card-form">
+		{% csrf_token %}
+		{% for item in form %}
+		{{ item.label }}
+		{{ item }}
+		{% endfor %}
+		<input class="edit-btn" type="submit" name="Submit">
+	</form>
+	<div class="create-password">
+		<h2 class="gen-password-head">Gen Password</h2>
+		<div class="slider">
+			<input class="range-slider" type="range" min="0" max="50" value="8" oninput="changeValue()">
+			<p id="current-value">16</p>
+		</div>
+		<input class="new-password" type="text" name="NewPassword" readonly>
+		<input class="gen-btn" type="submit" name="gen-password" value="Сгенерировать">
+	</div>
+</div>
+{% endblock %}

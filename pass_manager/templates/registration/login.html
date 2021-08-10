@@ -1,0 +1,14 @@
+{% extends 'registration/base.html' %}
+
+{% block content %}
+<form class="box" method="POST">
+	{% csrf_token %}
+	<h2>Вход</h2>
+	{{ form.username }}
+	{{ form.password }}
+	<input type="submit" name="" class="box-btn" value="Login">
+	<span class="registration">Или
+		<a href="#" class="registration-link">Создайте аккаунт</a>
+	</span>
+</form>
+{% endblock %}
