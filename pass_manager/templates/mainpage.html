@@ -14,7 +14,7 @@
 
 			<div class="accordion-body">
 				<ul class="site-list">
-					{% for card in folder.folder_card.all %}
+					{% for card in folder.cards_in_folder.all %}
 					<button class="show-item" id="create-card" type="button" name="button" data-form-url="{% url 'card-info' card.slug %}">
 						<li class="site-item">
 							<svg class="site-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

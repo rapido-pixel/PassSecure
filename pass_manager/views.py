@@ -13,7 +13,7 @@ class MainPage(LoginRequiredMixin, View):
 
     def get(self, request):
         folders = Folder.objects.all()
-        return render(request, 'index.html', {'folders': folders})
+        return render(request, 'mainpage.html', {'folders': folders})
 
 
 class CustomLoginView(LoginView):

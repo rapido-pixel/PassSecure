@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pass_manager',
     'bootstrap_modal_forms',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
